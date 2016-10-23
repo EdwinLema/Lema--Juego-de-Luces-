@@ -1,0 +1,168 @@
+//Juego de Luces
+//Edwin Lema 
+//24 de Octubre del 2016
+int contador=0;
+int contador1=0;
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(0,OUTPUT);
+  pinMode(1,OUTPUT);
+  pinMode(2,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(5,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(7,OUTPUT);
+  pinMode(8,OUTPUT);
+  pinMode(9,OUTPUT);
+  pinMode(10,OUTPUT);
+  pinMode(11,OUTPUT);
+  pinMode(12,OUTPUT);
+  pinMode(13,OUTPUT);
+}
+void loop() {
+  // put your main code here, to run repeatedly:
+  //PRIMER JUEGO DE LUCES 
+  // Las luces se encenderan desde un extremo hasta la mitad y se apagará; y luego la otra mitad.
+  for(contador=0; contador <8; contador ++)
+  {
+    digitalWrite(contador,HIGH);
+    delay(200); //retardo
+    }
+    for(contador=0; contador <8; contador ++)
+    {
+      digitalWrite(contador,LOW);
+      delay(100); //retardo
+      }
+    for (contador=8; contador <14; contador ++)
+    {
+      digitalWrite(contador,HIGH);
+      delay(200); // retardo
+      }
+      for (contador=8; contador <14; contador ++)
+    {
+      digitalWrite(contador,LOW);
+      delay (100);
+      }
+      // SEGUNDO JUEGO DE LUCES 
+      // las luces se encenderas desde ambos extremos hacia la mitad al mismo tiempo.
+       digitalWrite(0,HIGH);
+       digitalWrite(13,HIGH);
+       delay(80); // retardo
+       digitalWrite(0,LOW);
+       digitalWrite(13,LOW);
+       delay(60); //retardo
+       digitalWrite(1,HIGH);
+       digitalWrite(12,HIGH);
+       delay(80); // retardo
+       digitalWrite(1,LOW);
+       digitalWrite(12,LOW);
+       delay(60);
+       digitalWrite(2,HIGH);
+       digitalWrite(11,HIGH);
+       delay(80);
+       digitalWrite(2,LOW);
+       digitalWrite(11,LOW);
+       delay(60);
+       digitalWrite(3,HIGH);
+       digitalWrite(10,HIGH);
+       delay(80);
+       digitalWrite(3,LOW);
+       digitalWrite(10,LOW);
+       delay(60);
+       digitalWrite(4,HIGH);
+       digitalWrite(9,HIGH);
+       delay(80);
+       digitalWrite(4,LOW);
+       digitalWrite(9,LOW);
+       delay(60);
+       digitalWrite(5,HIGH);
+       digitalWrite(8,HIGH);
+       delay(80);
+       digitalWrite(5,LOW);
+       digitalWrite(8,LOW);
+       delay(60);
+       digitalWrite(6,HIGH);
+       digitalWrite(7,HIGH);
+       delay(80);
+       digitalWrite(6,LOW);
+       digitalWrite(7,LOW);
+       delay(60);
+
+      // TERCER JUEGO DE LUCES
+      // las luces se encienden de izquiera a derecha saltándose uno y retorna saltandose tres.
+      for(; contador <14;contador = contador +1)
+      {
+        digitalWrite(contador,HIGH);
+        delay(100);
+          }
+        
+        for(contador=14; contador >=0; contador= contador -2)
+      {
+        digitalWrite(contador,HIGH);
+        delay(100);
+      }
+      for(; contador <14;contador = contador +1)
+      {
+        digitalWrite(contador,LOW);
+        delay(100);
+      }
+      for(contador=14; contador >=0; contador= contador -2)
+      {
+        digitalWrite(contador,LOW);
+        delay(100);
+      }
+      // las luces se encenderan aleatoriamente de dos en dos y luego desde el centro se encenderan las luces a los extremos.
+      for(contador=0,contador1=1;contador <14;contador= contador +1, contador1= contador1+1)
+      {
+        digitalWrite(contador,HIGH);
+        digitalWrite(contador1,HIGH);
+        delay(100);
+        digitalWrite(contador,LOW);
+        digitalWrite(contador1,LOW);
+        delay(100);
+        }
+
+        digitalWrite(6,HIGH);
+       digitalWrite(7,HIGH);
+       delay(80); // retardo
+       digitalWrite(6,LOW);
+       digitalWrite(7,LOW);
+       delay(60); //retardo
+       digitalWrite(5,HIGH);
+       digitalWrite(8,HIGH);
+       delay(80); // retardo
+       digitalWrite(5,LOW);
+       digitalWrite(8,LOW);
+       delay(60);
+       digitalWrite(4,HIGH);
+       digitalWrite(9,HIGH);
+       delay(80);
+       digitalWrite(4,LOW);
+       digitalWrite(9,LOW);
+       delay(60);
+       digitalWrite(3,HIGH);
+       digitalWrite(10,HIGH);
+       delay(80);
+       digitalWrite(3,LOW);
+       digitalWrite(10,LOW);
+       delay(60);
+       digitalWrite(2,HIGH);
+       digitalWrite(11,HIGH);
+       delay(80);
+       digitalWrite(2,LOW);
+       digitalWrite(11,LOW);
+       delay(60);
+       digitalWrite(1,HIGH);
+       digitalWrite(12,HIGH);
+       delay(80);
+       digitalWrite(1,LOW);
+       digitalWrite(12,LOW);
+       delay(60);
+       digitalWrite(0,HIGH);
+       digitalWrite(13,HIGH);
+       delay(80);
+       digitalWrite(0,LOW);
+       digitalWrite(13,LOW);
+       delay(60);
+}      
